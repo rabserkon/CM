@@ -1,5 +1,5 @@
 from data.database import init_db
-from gui.app import MainWindow
+from gui.material_page import MaterialWindow
 from PyQt5.QtWidgets import QApplication
 import sys
 

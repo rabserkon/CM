@@ -8,7 +8,7 @@ from PyQt5.QtCore import Qt
 from gui.material_form import MaterialForm
 from service.material_service import MaterialService
 
-class MainWindow(QMainWindow):
+class MaterialWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Управление материалами")

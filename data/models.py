@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, Table
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Table, DateTime
 from sqlalchemy.orm import relationship, declarative_base
+from datetime import datetime
 
 Base = declarative_base()
 
@@ -32,7 +33,7 @@ class Supplier(Base):
     inn = Column(String, nullable=False, unique=True)
     type = Column(String, nullable=False)
     rate = Column(Integer, nullable=False)
-    start_date=Column(Dt)
+    start_date=Column(DateTime, nullable=False, default=datetime.utcnow)
     materials = relationship("Material", secondary=material_supplier, back_populates="suppliers")
 
 # Таблица "История изменений материалов"
